@@ -20,10 +20,8 @@ export default function RegisterPage() {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ name, email, password }),
       });
-      //   console.log(name, email, password);
 
       const data = await response.json();
-      console.log(data);
 
       if (!response.ok) {
         toast.error(data.err);
